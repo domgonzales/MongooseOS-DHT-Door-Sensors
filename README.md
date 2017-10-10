@@ -1,11 +1,11 @@
 # Based on A blank Mongoose OS app
 
-# This is a Program for the ESP8266 that uses GPIO 5 (D1) for the DHT22 and GPIO0 (D3)/ GPIO2 (D4) for the Door sensors. 
-# The door sensors are wired from GPIO0/2 directly to ground on a 1 second loop. The DHT22 sensor is on a 20 second loop
+ This is a Program for the ESP8266 that uses GPIO 5 (D1) for the DHT22 and GPIO0 (D3)/ GPIO2 (D4) for the Door sensors. 
+ The door sensors are wired from GPIO0/2 directly to ground on a 1 second loop. The DHT22 sensor is on a 20 second loop
 
-# I used MQTT on this to my Home-Assistant MQTT broker that is reading the states for these sensors. 
+ I used MQTT on this to my Home-Assistant MQTT broker that is reading the states for these sensors. 
 
-# For the Home-assistant configuration.yaml file this is how I am configured:
+ For the Home-assistant configuration.yaml file this is how I am configured:
 
 sensor 3:
     - platform: mqtt
