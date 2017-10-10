@@ -47,6 +47,7 @@ https://github.com/mongoose-os-apps/door-sensor
 
 The only thing that I had to come up with is the code to automatically resend the door sensor state after reboot. I accomplished this by using a system variable Sys.uptime() to fire the state through MQTT if the uptime was less than 15 seconds. Setting this to 10 seconds was a bit tight since most of the time it would print the uptime at around 10.xx seconds causing this portion of the code to never meet its condition. 
 
+```javascript
 Timer.set(10000 /* 1 sec */, true /* repeat */, function() {
   let uptime = Sys.uptime();
   let value1 = sensor_state;
@@ -64,8 +65,7 @@ Timer.set(10000 /* 1 sec */, true /* repeat */, function() {
   }
  // }
 }, null);
-
-
+```
 ## How to install this app
 
 - Install and start [mos tool](https://mongoose-os.com/software.html)
