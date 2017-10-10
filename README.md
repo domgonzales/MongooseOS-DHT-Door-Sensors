@@ -6,7 +6,7 @@
  I used MQTT on this to my Home-Assistant MQTT broker that is reading the states for these sensors. 
 
  For the Home-assistant configuration.yaml file this is how I am configured:
-
+```yaml
 sensor 3:
     - platform: mqtt
       state_topic: 'shop/door/bay1'
@@ -32,7 +32,7 @@ sensor 6:
       name: 'North Wall Humidity'
       unit_of_measurement: '%'
       value_template: '{{ value_json.humidity }}'
-
+```
 
 Any Questions feel free to ask. I am not a programmer and melded two of the example projects from the Mongoose OS Apps Page:
 
